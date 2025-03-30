@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS Publisher(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    person_id INT NOT NULL
+);
