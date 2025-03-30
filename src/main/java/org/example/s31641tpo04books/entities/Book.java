@@ -12,12 +12,12 @@ public class Book {
     private Long id;
 
     @ManyToMany
-//    @JoinTable(
-//            name = "book_author", // Join table name
-//            joinColumns = @JoinColumn(name = "book_id"), // Foreign key to Book
-//            inverseJoinColumns = @JoinColumn(name = "author_id") // Foreign key to Author
-//    )
-    private List<Author> author = new ArrayList<>();
+    @JoinTable(
+            name = "book_author",
+            joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "author_id")
+    )
+    private List<Author> authors = new ArrayList<>();
 
     @ManyToOne
     @JoinColumn(name="publisher")
@@ -46,12 +46,12 @@ public class Book {
         this.id = id;
     }
 
-    public List<Author> getAuthor() {
-        return author;
+    public List<Author> getAuthors() {
+        return authors;
     }
 
-    public void setAuthor(List<Author> author) {
-        this.author = author;
+    public void setAuthors(List<Author> authors) {
+        this.authors = authors;
     }
 
     public Publisher getPublisher() {

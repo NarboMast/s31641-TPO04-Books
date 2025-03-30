@@ -21,4 +21,8 @@ spring:
       mode: always
       platform: h2
       schema-locations: classpath:bookDB/schema/*.sql
-      data-locations: classpath:bookDB/data/personData.sql, classpath:bookDB/data/authorData.sql, classpath:bookDB/data/publisherData.sql, classpath:bookDB/data/bookData.sql
+      data-locations: classpath:bookDB/data/personData.sql,
+                      classpath:bookDB/data/authorData.sql,
+                      classpath:bookDB/data/publisherData.sql,
+                      classpath:bookDB/data/bookData.sql,
+                      classpath:bookDB/data/book_authorData.sql
